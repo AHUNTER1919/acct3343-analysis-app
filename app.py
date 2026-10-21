@@ -1,6 +1,6 @@
 """
 ACCT 3343 · Analysis App
-Consumer Discretionary screener: SELL on earnings quality and distress, BUY on quality + value.
+Screening Consumer Discretionary Stocks: Red Flags vs Hidden Value- By Ava Hunter 
 
 SELL side (Chapters 3–4): Scaled total accruals (STA), Scaled net operating assets (SNOA),
                           Beneish M-score / PMAN, Altman Z.  A firm is a SELL candidate when it
