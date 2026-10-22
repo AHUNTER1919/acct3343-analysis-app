@@ -176,7 +176,7 @@ buy = df[df["BUY"]].sort_values("buy_score", ascending=False)
 # ======================================================================================
 # 4 · PAGE
 # ======================================================================================
-st.title("Consumer Discretionary: SELL and BUY screener")
+st.title("Consumer Discretionary: Red Flags Vs Hidden Value")
 st.caption("US-listed Consumer Discretionary companies (Yahoo Finance sector: Consumer Cyclical). "
            "SELL screens earnings quality and distress; BUY screens quality and value.")
 
