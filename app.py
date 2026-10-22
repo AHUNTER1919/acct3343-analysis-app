@@ -186,6 +186,12 @@ c2.metric("SELL candidates", len(sell))
 c3.metric("BUY candidates", len(buy))
 c4.metric("Industries", df["industry"].nunique())
 
+with st.expander("About the Consumer Discretionary sector", expanded=True):
+    st.markdown("""
+Consumer Discretionary Sector represents companies that sell things we want, not necessarily need. People use their discretionary income to purchase these things. This makes the sector 
+highly cyclical. When the economy is strong people tend to buy more and feel comfortable spending. When the economy is weak, people pull back and spend less on these items. -Retailers and homebuilders tie up lots of cash in inventory, land and receivables, which is where accrual problems (STA, SNOA, Beneish) show up. -Many companies also carry heavy debt and store leases, so Altman Z matters in a downturn.brand strength and pricing power show up in gross profitability (GPA), and B/M helps avoid paying too much for popular brands.
+""")
+
 fmt = {"mcap_m": "{:,.0f}", "STA": "{:.3f}", "SNOA": "{:.2f}", "M_score": "{:.2f}",
        "PMAN": "{:.1%}", "Altman_Z": "{:.2f}", "GPA": "{:.3f}", "BM": "{:.3f}",
        "STA_pct": "{:.0f}", "SNOA_pct": "{:.0f}", "GPA_pct": "{:.0f}", "BM_pct": "{:.0f}",
@@ -272,21 +278,45 @@ with tab_drill:
             st.table(pd.DataFrame({"Value": [show(r[c], "{:.3f}") for c in comp]}, index=comp))
 
 with tab_conc:
-    st.info("Write these yourself after studying the filings. Go beyond the score: what in the "
-            "business explains the numbers, and what would prove you wrong?")
     st.markdown("""
 #### Top SELL candidates
-**[TICKER] · [Company]** — *Which flags fired and why they matter here (e.g. accruals rising
-faster than cash flow, inventory build-up, heavy lease and debt load). What could go wrong
-for the stock, and what would change your mind?*
 
-**[TICKER] · [Company]** — *...*
+BALY SELL BALLY'S 3 red flags. Altman Z is 0.07, far below the 1.81 distress line. SNOA is in the 98th percentile, and the M-score is −0.32 (37% PMAN) 
+
+In Q2 2026, revenue grew about 20% to $792M, mostly from buying Intralot, but Bally’s still lost $164M, largely because of interest costs. It carries about $4.5B in long-term debt against under $0.5B in cash. 
+
+*Its latest quarterly report raised “substantial doubt” about its ability to continue as a going concern. It is relying on a lender waiver that lasts through March 2027. 
+
+ELA SELL ENVELA 3 red flags. Its STA of 0.125 is the highest in your whole universe (99.7th percentile). SNOA is in the 88th percentile and the M-score is −0.77. 
+
+In 2025, net income more than doubled to $14.6M, but operating cash flow fell to $2.6M from $10.2M. Earnings rose while cash fell, which is exactly the gap STA measures. 
+
 
 #### Top BUY candidates
-**[TICKER] · [Company]** — *Why this company earns high gross profit on its assets and why
-the market may be pricing it too cheaply. Main risk to the thesis.*
 
-**[TICKER] · [Company]** — *...*
+ BUY GCO GENESCO #1 on BUY list. GPA and B/M are both in the 94th percentile. 
+
+Fiscal 2026 sales rose 5% to $2.44B. Journeys comparable sales rose 9% (12% in Q4), and Journeys operating income more than doubled to $60.5M. It has almost no debt ($3.4M) and $105M in cash. 
+
+management still expects adjusted EPS of $1.90–$2.30, up from $1.45. 
+
+Risk: sneaker and teen fashion trends, mall traffic, and tariffs. 
+
+BUY MACY'S M  
+
+GPA in the 83rd percentile and B/M in the 78th, about #9 on BUY list.  
+
+it’s a large, well-known company with plenty of public information. 
+
+In fiscal 2025, comparable sales grew 1.5%, its first annual growth in years. EPS of $2.32 beat guidance. It generated $1.4B in operating cash flow and $0.8B in free cash flow, and returned $448M to shareholders. Bloomingdale’s sales rose 9.9% in Q4. 
+
+Why it’s cheap: total sales fell 2.4% as it closes stores, and investors doubt department stores in general. 
+
+ 
+
+Macy’s screens cheap and profitable. The main risk is that it’s a value trap, but its strong free cash flow, planned store closures and growing Bloomingdale’s suggest the business is shrinking on purpose, not collapsing 
+
+Macy’s ranks highly on my BUY screen, but I’d treat it carefully. Falling EPS guidance and long-term department-store decline suggest it could be cheap for a reason. This shows the limit of screening on B/M alone. 
 """)
 
 with tab_method:
