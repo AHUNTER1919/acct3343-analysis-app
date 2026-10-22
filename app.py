@@ -188,8 +188,20 @@ c4.metric("Industries", df["industry"].nunique())
 
 with st.expander("About the Consumer Discretionary sector", expanded=True):
     st.markdown("""
-Consumer Discretionary Sector represents companies that sell things we want, not necessarily need. People use their discretionary income to purchase these things. This makes the sector 
-highly cyclical. When the economy is strong people tend to buy more and feel comfortable spending. When the economy is weak, people pull back and spend less on these items. -Retailers and homebuilders tie up lots of cash in inventory, land and receivables, which is where accrual problems (STA, SNOA, Beneish) show up. -Many companies also carry heavy debt and store leases, so Altman Z matters in a downturn.brand strength and pricing power show up in gross profitability (GPA), and B/M helps avoid paying too much for popular brands.
+Consumer Discretionary Sector represents companies that sell things we want, not necessarily need.
+People use their discretionary income to purchase these things. 
+This makes the sector 
+highly cyclical.   
+The sector includes:
+
+- Clothing and footwear
+ - Restaurants and hotels
+ - Homebuilders and furniture
+When the economy is strong people tend to buy more and feel comfortable spending. 
+When the economy is weak, people pull back and spend less on these items. 
+-Retailers and homebuilders tie up lots of cash in inventory, land and receivables, which is where accrual problems (STA, SNOA, Beneish) show up.
+-Many companies also carry heavy debt and store leases, so Altman Z matters in a downturn. 
+ Brand strength and pricing power show up in gross profitability (GPA), and B/M helps avoid paying too much for popular brands.
 """)
 
 fmt = {"mcap_m": "{:,.0f}", "STA": "{:.3f}", "SNOA": "{:.2f}", "M_score": "{:.2f}",
